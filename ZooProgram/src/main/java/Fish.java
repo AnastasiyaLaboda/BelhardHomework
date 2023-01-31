@@ -1,7 +1,7 @@
 public class Fish extends Creature {
 
-    public Fish(TypesCreatures type, String name) {
-        super(String.valueOf(type), name);
+    public Fish(String name) {
+        super(String.valueOf(TypesCreatures.FISH), name);
     }
 
     @Override

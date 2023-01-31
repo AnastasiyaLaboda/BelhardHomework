@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Animal extends Creature {
 
-    public Animal(TypesCreatures type, String name) {
-        super(String.valueOf(type), name);
+    public Animal(String name) {
+        super(String.valueOf(TypesCreatures.ANIMAL), name);
     }
 
     @Override

@@ -1,7 +1,7 @@
 public class Bird extends Creature {
 
-    public Bird(TypesCreatures type, String name) {
-        super(String.valueOf(type), name);
+    public Bird(String name) {
+        super(String.valueOf(TypesCreatures.BIRD), name);
     }
 
     @Override
