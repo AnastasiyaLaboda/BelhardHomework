@@ -1,9 +1,11 @@
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.Scanner;
+
 public class ZooProgram {
     public static void main(String[] args) {
 
-        Animal lion = new Animal(TypesCreatures.ANIMAL, "Lion");
+        Animal lion = new Animal("Lion");
         lion.breathe();
         lion.move();
         lion.uniqueProperty();
@@ -17,14 +19,14 @@ public class ZooProgram {
         zooList.add(lion);
 
 
-        zooList.add(new Animal(TypesCreatures.ANIMAL, "Leopard"));
-        zooList.add(new Animal(TypesCreatures.ANIMAL, "Monkey"));
+        zooList.add(new Animal("Leopard"));
+        zooList.add(new Animal("Monkey"));
 
-        zooList.add(new Fish(TypesCreatures.FISH, "salmon"));
-        zooList.add(new Fish(TypesCreatures.FISH, "shark"));
+        zooList.add(new Fish("salmon"));
+        zooList.add(new Fish("shark"));
 
-        zooList.add(new Bird(TypesCreatures.BIRD, "parrot"));
-        zooList.add(new Bird(TypesCreatures.BIRD, "owl"));
+        zooList.add(new Bird("parrot"));
+        zooList.add(new Bird("owl"));
 
 
 /*        for (Creature creature : zooList) {
@@ -33,7 +35,7 @@ public class ZooProgram {
             System.out.println();
         }*/
 
-
+        addAnimalsToList(zooList, -1);
         printCreature(zooList);
 
     }
@@ -60,5 +62,14 @@ public class ZooProgram {
         }
         while (number != 0);
     }
+
+
+    public static LinkedList addAnimalsToList(LinkedList list, int amountAnimals) {
+        for (int i = 0; i < amountAnimals; i++) {
+            list.add(new Animal("animal" + (i + 1)));
+        }
+        return list;
+    }
+
 
 }
